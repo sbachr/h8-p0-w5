@@ -9,8 +9,8 @@
 //   <class>: { name: <name>, score: <score> }
 // }
 function highestScore(students) {
-    if (students == undefined) return []
-    // Code disini
+    if (students == undefined) return {}
+
     var result = {}
     for (let student of students) {
         
@@ -92,4 +92,4 @@ console.log(highestScore([
 // // }
 
 
-// console.log(highestScore([])); //{}
+console.log(highestScore([])); //{}
