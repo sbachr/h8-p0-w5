@@ -34,15 +34,16 @@
 // }
 
 // Solution 2
-// function deepSum(arr) {
-//     if(arr.length == 0) return []
-//     var result = 0;
-//     for(let a=0; a<arr.length; a++) {
-//     if(Array.isArray(arr[a])) result += deepSum(arr[a])
-//     else result += arr[a]
-//     }
-//     return result
-// }
+function deepSum(arr) {
+  if(arr.length == 0) return `No num`
+    if(arr.length == 0) return []
+    var result = 0;
+    for(let a=0; a<arr.length; a++) {
+    if(Array.isArray(arr[a])) result += deepSum(arr[a])
+    else result += arr[a]
+    }
+    return result
+}
 
 
 //TEST CASE
@@ -64,25 +65,25 @@ console.log(deepSum([
   ]
 ])); // 316
 
-// console.log(deepSum([
-//   [
-//     [20, 10],
-//     [15],
-//     [1, 1]
-//   ],
-//   [
-//     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-//     [2],
-//     [9, 11]
-//   ],
-//   [
-//     [3, 5, 1],
-//     [1, 5, 3],
-//     [1]
-//   ],
-//   [
-//     [2]
-//   ]
-// ])); // 156
+console.log(deepSum([
+  [
+    [20, 10],
+    [15],
+    [1, 1]
+  ],
+  [
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    [2],
+    [9, 11]
+  ],
+  [
+    [3, 5, 1],
+    [1, 5, 3],
+    [1]
+  ],
+  [
+    [2]
+  ]
+])); // 156
 
-//  console.log(deepSum([])); // No num
+ console.log(deepSum([])); // No num
